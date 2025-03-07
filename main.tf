@@ -19,3 +19,10 @@ resource "aws_subnet" "public-1" {
     Name = "deham9"
   }
 }
+# Create an Internet Gateway
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.dev_vpc.id
+  tags = {
+    Name = "deham9"
+  }
+}
